@@ -19,6 +19,11 @@ config/name="Lumberjack"
 run/main_scene="res://Stage1.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/test_width=2294
+window/size/test_height=1263
+
 [rendering]
 
 quality/2d/use_pixel_snap=true

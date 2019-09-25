@@ -1,88 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Jungle/green.PNG" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 88.8902, 86.583 )
+[ext_resource path="res://ground.tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 
 [node name="Stage1" type="Node2D"]
-position = Vector2( 1, 0 )
+position = Vector2( 0, 335 )
+scale = Vector2( 2, 2 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 213.808, 331.589 )
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 393320, 0, 0, 917547, 0, 0, 1048617, 0, 0, 1114151, 0, 0, 1245218, 0, 0, 1245221, 0, 0, 1245229, 0, 0, 1245230, 0, 0, 1245231, 0, 0, 1245232, 0, 0, 1245233, 0, 0, 1245234, 0, 0, 1245235, 0, 0, 1245236, 0, 0, 1245237, 0, 0, 1310754, 0, 0, 1310757, 0, 0, 1376264, 0, 0, 1376288, 0, 0, 1376290, 0, 0, 1376293, 0, 0, 1441800, 0, 0, 1441826, 0, 0, 1441829, 0, 0, 1507336, 0, 0, 1507359, 0, 0, 1572872, 0, 0, 1572895, 0, 0, 1638408, 0, 0, 1638431, 0, 0, 1703944, 0, 0, 1703955, 0, 0, 1703956, 0, 0, 1703957, 0, 0, 1703959, 0, 0, 1703964, 0, 0, 1703968, 0, 0, 1769480, 0, 0, 1769491, 0, 0, 1769495, 0, 0, 1769499, 0, 0, 1769504, 0, 0, 1769534, 0, 0, 1769535, 0, 0, 1769536, 0, 0, 1769537, 0, 0, 1769539, 0, 0, 1769540, 0, 0, 1769541, 0, 0, 1769542, 0, 0, 1769543, 0, 0, 1769544, 0, 0, 1769545, 0, 0, 1769546, 0, 0, 1769547, 0, 0, 1769548, 0, 0, 1769549, 0, 0, 1769550, 0, 0, 1769551, 0, 0, 1835009, 0, 0, 1835010, 0, 0, 1835011, 0, 0, 1835012, 0, 0, 1835013, 0, 0, 1835014, 0, 0, 1835015, 0, 0, 1835016, 0, 0, 1835017, 0, 0, 1835018, 0, 0, 1835019, 0, 0, 1835020, 0, 0, 1835021, 0, 0, 1835022, 0, 0, 1835023, 0, 0, 1835024, 0, 0, 1835025, 0, 0, 1835026, 0, 0, 1835027, 0, 0, 1835028, 0, 0, 1835029, 0, 0, 1835030, 0, 0, 1835031, 0, 0, 1835032, 0, 0, 1835033, 0, 0, 1835034, 0, 0, 1835035, 0, 0, 1835036, 0, 0, 1835037, 0, 0, 1835038, 0, 0, 1835039, 0, 0, 1835040, 0, 0, 1835041, 0, 0, 1835042, 0, 0, 1835043, 0, 0, 1835044, 0, 0, 1835045, 0, 0, 1835046, 0, 0, 1835047, 0, 0, 1835048, 0, 0, 1835049, 0, 0, 1835050, 0, 0, 1835051, 0, 0, 1835052, 0, 0, 1835053, 0, 0, 1835054, 0, 0, 1835055, 0, 0, 1835056, 0, 0, 1835057, 0, 0, 1835058, 0, 0, 1835059, 0, 0, 1835060, 0, 0, 1835061, 0, 0, 1835062, 0, 0, 1835063, 0, 0, 1835064, 0, 0, 1835065, 0, 0, 1835066, 0, 0, 1835067, 0, 0, 1835068, 0, 0, 1835069, 0, 0, 1835070, 0, 0, 1835073, 0, 0, 1835074, 0, 0, 1835075, 0, 0 )
 
-[node name="Ground" type="Sprite" parent="."]
-position = Vector2( 173.551, 425.05 )
-scale = Vector2( 0.171097, 0.173442 )
-texture = ExtResource( 2 )
-region_rect = Rect2( 0.16, 0, 3.58, -0.78 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/StaticBody2D"]
-position = Vector2( 0, -0.654541 )
-shape = SubResource( 1 )
-
-[node name="Ground3" type="Sprite" parent="."]
-position = Vector2( 234.557, 425.051 )
-scale = Vector2( 0.171097, 0.173442 )
-texture = ExtResource( 2 )
-region_rect = Rect2( 0.16, 0, 3.58, -0.78 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground3/StaticBody2D"]
-position = Vector2( 0, -0.654541 )
-shape = SubResource( 1 )
-
-[node name="Ground2" type="Sprite" parent="."]
-position = Vector2( 204.129, 425.166 )
-scale = Vector2( 0.171097, 0.173442 )
-texture = ExtResource( 2 )
-region_rect = Rect2( 0.16, 0, 3.58, -0.78 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2/StaticBody2D"]
-position = Vector2( 0, -0.654541 )
-shape = SubResource( 1 )
-
-[node name="Ground4" type="Sprite" parent="."]
-position = Vector2( 265.135, 425.166 )
-scale = Vector2( 0.171097, 0.173442 )
-texture = ExtResource( 2 )
-region_rect = Rect2( 0.16, 0, 3.58, -0.78 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground4/StaticBody2D"]
-position = Vector2( 0, -0.654541 )
-shape = SubResource( 1 )
-
-[node name="Ground5" type="Sprite" parent="."]
-position = Vector2( 265.459, 395.401 )
-scale = Vector2( 0.171097, 0.173442 )
-texture = ExtResource( 2 )
-region_rect = Rect2( 0.16, 0, 3.58, -0.78 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground5"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground5/StaticBody2D"]
-position = Vector2( 0, -0.654541 )
-shape = SubResource( 1 )
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 310.091, 279.982 )
